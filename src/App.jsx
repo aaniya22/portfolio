@@ -1,6 +1,9 @@
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Stack from './components/Stack'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -9,7 +12,10 @@ function App() {
       <main id="top">
         <Hero />
         <Projects />
+        <Experience />
+        <Stack />
       </main>
+      <Footer />
     </div>
   )
 }

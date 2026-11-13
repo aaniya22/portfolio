@@ -1,0 +1,83 @@
+.tl {
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 20px;
+}
+
+.tl.single {
+  grid-template-columns: 1fr;
+}
+
+.tl h4 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.tl ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.tl li {
+  font-size: 14px;
+  color: var(--mute);
+  margin-bottom: 6px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sk {
+  border-top: 1px solid var(--line);
+  padding: 18px 18px 18px 0;
+}
+
+.sk p {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.foot {
+  padding: 90px 0 60px;
+  border-top: 1px solid var(--line);
+}
+
+.foot .big {
+  font-size: clamp(28px, 7vw, 96px);
+  letter-spacing: -0.045em;
+  font-weight: 600;
+  line-height: 1;
+  border-bottom: 3px solid var(--accent);
+  word-break: break-word;
+}
+
+.foot .links {
+  margin-top: 36px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.foot .link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+}
+
+.foot .link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 800px) {
+  .tl,
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}
