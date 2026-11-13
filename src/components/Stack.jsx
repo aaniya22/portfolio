@@ -11,10 +11,9 @@ const groups = [
 
 function Stack() {
   return (
-    <section>
-      <div className="sh">
-        <h2>Stack</h2>
-      </div>
+    <section className="page">
+      <div className="eyebrow"><span>04</span><i /><span>Stack</span></div>
+      <div className="rule" />
       <div className="skills">
         {groups.map((g) => (
           <div className="sk" key={g.label}>

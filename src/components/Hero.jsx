@@ -1,13 +1,6 @@
 import { useRef, useState } from 'react'
 import './Hero.css'
 
-const stats = [
-  { value: 'Top 1%', label: 'GSSoC 2026, S Tier' },
-  { value: '300+', label: 'PRs merged' },
-  { value: '38', label: 'Repositories' },
-  { value: '17', label: 'Badges earned' },
-]
-
 function Hero() {
   const heroRef = useRef(null)
   const badgeRef = useRef(null)
@@ -40,19 +33,28 @@ function Hero() {
 
   return (
     <div className="hero" ref={heroRef}>
-      <div className="tag">
-        Portfolio ’26 &nbsp;·&nbsp; <span className="open">● Open to internships</span>
+      <div className="hero-top up">
+        <span>Portfolio ’26</span>
+        <span>
+          <i className="dot" />
+          Open to internships
+        </span>
       </div>
 
-      <h1>
-        Full-stack apps that <em>ship.</em>
+      <h1 className="display hero-title">
+        <em>Full-stack web apps</em> built end to end with React and Node
       </h1>
 
-      <p className="lede">
-        Full-stack-oriented developer with strong <b>React</b> and <b>JavaScript</b> skills and
-        hands-on experience with <b>Node.js, Express and MongoDB</b>. B.Tech CSE (AI &amp; ML),
-        University of Delhi, 2024–2028.
-      </p>
+      <div className="hero-bottom">
+        <p>
+          Full-stack-oriented developer with strong React and JavaScript skills and hands-on
+          experience with Node.js, Express and MongoDB. GSSoC 2026 Global Rank #29 (Top 1%).
+        </p>
+        <div className="hero-links up">
+          <a href="https://github.com/aaniya22" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="mailto:aaniyaatomar@gmail.com">Get in touch ↗</a>
+        </div>
+      </div>
 
       <div
         className="badge"
@@ -65,15 +67,6 @@ function Hero() {
       >
         <span>#29</span>
         <small>GSSoC ’26 · Global</small>
-      </div>
-
-      <div className="stats">
-        {stats.map((s) => (
-          <div className="stat" key={s.label}>
-            <b>{s.value}</b>
-            <span className="tag">{s.label}</span>
-          </div>
-        ))}
       </div>
     </div>
   )
