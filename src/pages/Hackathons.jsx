@@ -1,4 +1,3 @@
-import Footer from '../components/Footer'
 import CvRows from '../components/CvRows'
 import './Pages.css'
 
@@ -41,7 +40,7 @@ const wins = [
 function Hackathons() {
   return (
     <>
-      <section className="page">
+      <section className="page" id="hackathons">
         <div className="eyebrow"><span>01</span><i /><span>Hackathons &amp; achievements</span></div>
         <h1 className="display page-title">
           Built under pressure, <em>ranked</em> in the open.
@@ -61,7 +60,6 @@ function Hackathons() {
           <CvRows rows={wins} />
         </div>
       </section>
-      <Footer />
     </>
   )
 }

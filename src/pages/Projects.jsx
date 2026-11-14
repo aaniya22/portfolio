@@ -1,4 +1,3 @@
-import Footer from '../components/Footer'
 import './Pages.css'
 
 const items = [
@@ -60,7 +59,7 @@ function Row({ item, i }) {
 function Projects() {
   return (
     <>
-      <section className="page">
+      <section className="page" id="projects">
         <div className="eyebrow"><span>01</span><i /><span>Projects</span></div>
         <h1 className="display page-title">
           Selected work across <em>apps, dashboards,</em> and open source
@@ -73,7 +72,6 @@ function Projects() {
         {items.map((it, i) => <Row key={it.title} item={it} i={i} />)}
       </section>
 
-      <Footer />
     </>
   )
 }

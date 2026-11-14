@@ -69,3 +69,6 @@ a {
   font-style: normal;
   color: var(--accent);
 }
+html {
+  scroll-padding-top: 90px;
+}

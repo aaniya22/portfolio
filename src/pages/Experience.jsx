@@ -1,4 +1,3 @@
-import Footer from '../components/Footer'
 import CvRows from '../components/CvRows'
 import './Pages.css'
 
@@ -20,7 +19,7 @@ const rows = [
 function Experience() {
   return (
     <>
-      <section className="page">
+      <section className="page" id="experience">
         <div className="eyebrow"><span>01</span><i /><span>Experience</span></div>
         <h1 className="display page-title">
           Where I’ve worked and <em>what I’ve helped</em> build.
@@ -35,7 +34,6 @@ function Experience() {
           <CvRows rows={rows} />
         </div>
       </section>
-      <Footer />
     </>
   )
 }

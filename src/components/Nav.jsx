@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { useEffect, useState } from 'react'
 import "./Nav.css";
 
 const socials = [
@@ -33,21 +33,43 @@ const socials = [
   },
 ];
 
+const links = [
+  { id: 'home', label: 'Home' },
+  { id: 'education', label: 'Education' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'hackathons', label: 'Hackathons & Achievements' },
+  { id: 'about', label: 'About' },
+]
+
 function Nav() {
+  const [active, setActive] = useState('home')
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(e.target.id)
+        })
+      },
+      { rootMargin: '-40% 0px -55% 0px' },
+    )
+    links.forEach((l) => {
+      const el = document.getElementById(l.id)
+      if (el) observer.observe(el)
+    })
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <header className="nav">
-      <NavLink to="/" className="brand">
-        Aaniya
-      </NavLink>
+      <a href="#home" className="brand">Aaniya</a>
       <nav>
-        <NavLink to="/" end>
-          Home
-        </NavLink>
-        <NavLink to="/education">Education</NavLink>
-        <NavLink to="/experience">Experience</NavLink>
-        <NavLink to="/projects">Projects</NavLink>
-        <NavLink to="/hackathons">Hackathons &amp; Achievements</NavLink>
-        <NavLink to="/about">About</NavLink>
+        {links.map((l) => (
+          <a key={l.id} href={`#${l.id}`} className={active === l.id ? 'active' : ''}>
+            {l.label}
+          </a>
+        ))}
       </nav>
       <div className="socials">
         {socials.map((s) => (
@@ -56,7 +78,7 @@ function Nav() {
             href={s.href}
             aria-label={s.label}
             title={s.label}
-            target={s.href.startsWith("mailto:") ? undefined : "_blank"}
+            target={s.href.startsWith('mailto:') ? undefined : '_blank'}
             rel="noopener noreferrer"
           >
             <svg
@@ -75,7 +97,7 @@ function Nav() {
         ))}
       </div>
     </header>
-  );
+  )
 }
 
-export default Nav;
+export default Nav

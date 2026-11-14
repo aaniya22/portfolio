@@ -1,11 +1,10 @@
-import Footer from '../components/Footer'
 import Stack from '../components/Stack'
 import './Pages.css'
 
 function About() {
   return (
     <>
-      <section className="page">
+      <section className="page" id="about">
         <div className="eyebrow"><span>01</span><i /><span>About me</span></div>
         <h1 className="display page-title">
           I <em>build</em> things that work and <em>ship</em>
@@ -18,7 +17,6 @@ function About() {
         <a className="dl up" href="/Aaniya_Resume.pdf" download>Download resume ↓</a>
       </section>
       <Stack />
-      <Footer />
     </>
   )
 }
