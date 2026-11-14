@@ -131,3 +131,9 @@ a.row:hover .arr {
     gap: 8px;
   }
 }
+.about-text {
+  max-width: 640px;
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 36px 0 24px;
+}

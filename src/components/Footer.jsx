@@ -1,4 +1,4 @@
-import './Sections.css'
+import "./Sections.css";
 
 function Footer() {
   return (
@@ -14,10 +14,20 @@ function Footer() {
         <a className="link" href="#" target="_blank" rel="noopener noreferrer">
           LinkedIn ↗
         </a>
-        <a className="link" href="https://github.com/aaniya22" target="_blank" rel="noopener noreferrer">
+        <a
+          className="link"
+          href="https://github.com/aaniya22"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           GitHub ↗
         </a>
-        <a className="link" href="/Aaniya_Resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a
+          className="link"
+          href="/Aaniya_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Resume ↗
         </a>
         <a className="link" href="tel:+917078036039">
@@ -25,7 +35,7 @@ function Footer() {
         </a>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

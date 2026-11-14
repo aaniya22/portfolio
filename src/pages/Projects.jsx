@@ -57,11 +57,11 @@ function Row({ item, i }) {
   )
 }
 
-function Work() {
+function Projects() {
   return (
     <>
       <section className="page">
-        <div className="eyebrow"><span>01</span><i /><span>Work</span></div>
+        <div className="eyebrow"><span>01</span><i /><span>Projects</span></div>
         <h1 className="display page-title">
           Selected work across <em>apps, dashboards,</em> and open source
         </h1>
@@ -78,4 +78,4 @@ function Work() {
   )
 }
 
-export default Work
+export default Projects

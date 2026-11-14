@@ -12,7 +12,7 @@ const groups = [
 function Stack() {
   return (
     <section className="page">
-      <div className="eyebrow"><span>04</span><i /><span>Stack</span></div>
+      <div className="eyebrow"><span>02</span><i /><span>Stack</span></div>
       <div className="rule" />
       <div className="skills">
         {groups.map((g) => (
