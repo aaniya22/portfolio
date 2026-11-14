@@ -6,7 +6,15 @@ function CvRows({ rows }) {
         <h4>{r.org}</h4>
         {r.role && <div className="role">{r.role}</div>}
       </div>
-      <p>{r.text}</p>
+      {r.bullets ? (
+        <div>
+          {r.bullets.map((b, i) => (
+            <p key={i} style={{ marginBottom: 12 }}>{b}</p>
+          ))}
+        </div>
+      ) : (
+        <p>{r.text}</p>
+      )}
     </div>
   ))
 }

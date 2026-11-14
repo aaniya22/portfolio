@@ -23,7 +23,7 @@ const socials = [
   },
   {
     label: "Email",
-    href: "mailto:aaniyaatomar@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&to=aaniyaatomar@gmail.com",
     icon: (
       <>
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -63,7 +63,7 @@ function Nav() {
 
   return (
     <header className="nav">
-      <a href="#home" className="brand">Aaniya</a>
+      <a href="/Aaniya_Resume.pdf" target="_blank" rel="noreferrer" className="brand">Aaniya&rsquo;s Resume</a>
       <nav>
         {links.map((l) => (
           <a key={l.id} href={`#${l.id}`} className={active === l.id ? 'active' : ''}>

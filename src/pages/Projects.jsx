@@ -19,7 +19,6 @@ const items = [
     text: '300+ PRs merged across 38 repositories, including CI fixes, a smart bio system, a URL shortener and reusable animation components.',
     cat: 'Open source',
     meta: 'Top 1% · S Tier',
-    href: 'https://github.com/aaniya22',
   },
   {
     title: 'Nexgn-CS',
@@ -32,7 +31,7 @@ const items = [
     text: 'Responsive React app using the OpenWeather API for real-time conditions in any city, with error handling for invalid names.',
     cat: 'Frontend',
     meta: 'React · OpenWeather',
-    href: 'https://github.com/aaniya22',
+    href: 'https://github.com/aaniya22/weather-app',
   },
 ]
 

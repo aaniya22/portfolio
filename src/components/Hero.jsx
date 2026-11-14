@@ -40,7 +40,7 @@ function Hero() {
   return (
     <div className="hero" ref={heroRef}>
       <div className="hero-top up">
-        <span>Portfolio ’26</span>
+        
         <span>
           <i className="dot" />
           Open to internships
@@ -59,30 +59,10 @@ function Hero() {
           <b>38 repos</b>, and ranked <b>#18 of 46,770 contributors</b> at GSSoC
           2026.
         </p>
-        <div className="hero-links up">
-          <a
-            href="https://github.com/aaniya22"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub ↗
-          </a>
-          <a href="mailto:aaniyaatomar@gmail.com">Get in touch ↗</a>
-        </div>
+        
       </div>
 
-      <div
-        className="badge"
-        ref={badgeRef}
-        style={badgeStyle}
-        onPointerDown={onDown}
-        onPointerMove={onMove}
-        onPointerUp={() => setDragging(false)}
-        title="Drag me"
-      >
-        <span>#29</span>
-        <small>GSSoC ’26 · Global</small>
-      </div>
+      
     </div>
   );
 }
